@@ -13,7 +13,7 @@ FBullCowGame::FBullCowGame() //default constructor
 	Reset();
 }
 
-int32 FBullCowGame::GetCurrentTry() const { return MyCurrrentTry; }
+int32 FBullCowGame::GetCurrentTry() const { return MyCurrentTry; }
 bool FBullCowGame::IsGameWon() const { return bGameIsWon; }
 
 int32 FBullCowGame::GetMaxTries() const 
@@ -56,7 +56,7 @@ void FBullCowGame::Reset()
 {
 	TMap<int32, FString> HiddenWord{ {1,"planet"},{2,"cloned"},{3,"crazed"},{4,"beauty"},{5,"cat"},{6,"ate"},{7,"head"},{8,"lead"},{9,"great"},{10,"trick"} };
 
-	MyCurrrentTry = 1;
+	MyCurrentTry = 1;
 	MyHiddenWord = HiddenWord[(rand()%10)+1];
 	bGameIsWon = false;
 	return;
@@ -65,7 +65,7 @@ void FBullCowGame::Reset()
 // receives a valid guess, increments turn, and returns count.
 FBullCowCount FBullCowGame::SubmitValidGuess(FString Guess)
 {
-	MyCurrrentTry++;
+	MyCurrentTry++;
 	FBullCowCount BullCowCount;
 	//loop all letters in the hidden word
 	int32 HiddenWordLength = MyHiddenWord.length();

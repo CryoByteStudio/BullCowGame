@@ -42,7 +42,7 @@ public:
 
 private:
 	// See the constructor FBullCowGame
-	int32 MyCurrrentTry;
+	int32 MyCurrentTry;
 	FString MyHiddenWord;
 	bool bGameIsWon;
 	bool IsIsogram(FString) const;

@@ -6,6 +6,7 @@ For game logic see the FBullCowGame Class.
 #include <iostream>
 #include <string>
 #include "FBullCowGame.h"
+#include <windows.graphics.h>
 
 // to make syntax unreal friendly
 using FText = std::string;
